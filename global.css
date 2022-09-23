@@ -1,5 +1,12 @@
 body {
-    background-color: lightblue;
+    background-color: #ADD8E6;
+    font: 1em Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+  font: 3em bold Arial, sans-serif;
+  text-align: center;
 }
 
 .rotate90 {

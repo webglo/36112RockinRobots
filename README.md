@@ -1,1 +1,1 @@
-# 36112RockinRobots
+Hello! We are 36112 The Rockin Robots from Polo Park Middle School in Wellington Florida. This website was created for our team members to log important things, events, memories, to be showed to the judges. This website will have a description of our Core Values, Project, and Robot Design. We include other people and we use teamwork with our teammates to look over the website.

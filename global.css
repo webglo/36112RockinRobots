@@ -9,6 +9,15 @@ h1 {
   text-align: center;
 }
 
+.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  color: initial;
+}
+
 .rotate90 {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);

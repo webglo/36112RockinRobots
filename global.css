@@ -9,7 +9,7 @@ h1 {
   text-align: center;
 }
 
-button { 
+.button1 { 
   align-items: center; 
   appearance: none; 
   background-color: #3EB2FD; 
@@ -37,14 +37,14 @@ button {
   white-space: nowrap;
 }
 
-button:active, 
-button:focus { 
+.button1:active, 
+.button1:focus { 
   outline: none; 
 } 
-button:hover { 
+.button1:hover { 
   background-position: -20px -20px; 
 } 
-button:focus:not(:active) { 
+.button1:focus:not(:active) { 
   box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em; 
 }
 

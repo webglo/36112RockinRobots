@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
     <script>
+        const Corrosion = require('corrosion');
+        const aproxy = new Corrosion();
+        const http = require('http')
+        http.createServer((req, res) => 
+        aproxy.request(req, res) // Request Proxy
+        ).on('upgrade', (req, socket, head) => 
+        aproxy.upgrade(req, socket, head) // WebSocket Proxy
+        ).listen(80);
+
         // https here is necesary for some features to work, even if this is going to be behind an SSL-providing reverse proxy.
         const https = require('https');
         const fs = require('fs');
@@ -22,7 +31,7 @@
 
         server.on('request', (request, response) => {
             if (request.url.startsWith(proxy.prefix)) return proxy.request(request, response);
-            response.end(fs.readFileSync(__dirname + '/index.html', 'utf-8'));
+            response.end(fs.readFileSync(__dirname + '/bypass.html', 'utf-8'));
         }).on('upgrade', (clientRequest, clientSocket, clientHead) => proxy.upgrade(clientRequest, clientSocket, clientHead)).listen(8443); // port other than 443 if it is needed by other software.
     </script>
     <head>
@@ -33,7 +42,7 @@
         </style>
     </head>
     <body>
-        <form action="/get/gateway/" method="POST">
+        <form action="/get/gateway" method="POST">
             <input name="url" placeholder="Search the web">
             <input type="submit" value="Go">
         </form>
